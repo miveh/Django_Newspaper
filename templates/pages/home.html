@@ -1,0 +1,86 @@
+{#{% extends 'pages/base.html' %}#}
+{#{% block title %}Home{% endblock title %}#}
+{#{% block content %}#}
+{#    {% if user.is_authenticated %}#}
+{#        Hi {{ user.username }}! You are {{ user.age }} years old.#}
+{#        <p><a href="{% url 'logout' %}">Log Out</a></p>#}
+{#    {% else %}#}
+{#        <p>You are not logged in</p>#}
+{#        <a href="{% url 'login' %}">Log In</a>|#}
+{#        <a href="{% url 'login' %}">Sign Up</a>#}
+{#    {% endif %}#}
+{#{% endblock content %}#}
+
+{#----------------------------#}
+{#<h1>Message board homepage</h1>#}
+{#<ul>#}
+{#{% for post in all_posts_list %}#}
+{#<li>{{ post.text }}</li>#}
+{#{% endfor %}#}
+{#</ul>#}
+
+{#------------------------------#}
+
+<!-- templates/home.html -->
+{#{% extends 'pages/base.html' %}#}
+{#{% block content %}#}
+{#{% for post in object_list %}#}
+{#<div class="post-entry">#}
+{#<h2><a href="">{{ post.title }}</a></h2>#}
+{#<p>{{ post.body }}</p>#}
+{#</div>#}
+{#{% endfor %}#}
+{#{% endblock content %}#}
+{#----------------------------------#}
+
+{#{% extends 'pages/base.html' %}#}
+{#{% block content %}#}
+{#{% for post in object_list %}#}
+{#<div class="post-entry">#}
+{#<h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>#}
+{#<p>{{ post.body }}</p>#}
+{#</div>#}
+{#{% endfor %}#}
+{#{% endblock content %}#}
+{#-----------------------------------#}
+{#{% extends 'pages/base.html' %}#}
+{#{% block title %}Home{% endblock title %}#}
+{#{% block content %}#}
+{#    {% if user.is_authenticated %}#}
+{#        Hi {{ user.username }}!#}
+{#        <p><a href="{% url 'logout' %}">Log Out</a></p>#}
+{#    {% else %}#}
+{#        <p>You are not logged in</p>#}
+{#        <a href="{% url 'login' %}">Log In</a> |#}
+{#        <a href="{% url 'signup' %}">Sign Up</a>#}
+{#    {% endif %}#}
+{#{% endblock content %}#}
+{#---------------------------------------#}
+
+{#{% extends 'pages/base.html' %}#}
+{#{% block title %}Home{% endblock title %}#}
+{#{% block content %}#}
+{#    {% if user.is_authenticated %}#}
+{#        Hi {{ user.username }}! You are {{ user.age }} years old.#}
+{#        <p><a href="{% url 'logout' %}">Log Out</a></p>#}
+{#    {% else %}#}
+{#        <p>You are not logged in</p>#}
+{#        <a href="{% url 'login' %}">Log In</a> |#}
+{#        <a href="{% url 'signup' %}">Sign Up</a>#}
+{#    {% endif %}#}
+{#{% endblock content %}#}
+{#-------------------------#}
+<!-- templates/home.html -->
+{% extends 'pages/base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+    <br/>
+    <div class="jumbotron">
+        <h1 class="display-4">Newspaper app</h1>
+        <p class="lead">A Newspaper website built with Django.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}"
+               role="button">View All Articles</a>
+        </p>
+    </div>
+{% endblock content %}
