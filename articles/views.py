@@ -22,7 +22,7 @@ class ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):  #
 
     def test_func(self):  # new
         obj = self.get_object()
-        return obj.author == self.request.use
+        return obj.author == self.request.user
 
 
 class ArticleDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):  # new
