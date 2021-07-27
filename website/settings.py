@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/New_York' # new
+TIME_ZONE = 'America/New_York'  # new
 
 USE_I18N = True
 
@@ -135,3 +135,12 @@ LOGOUT_REDIRECT_URL = 'home'  # new
 AUTH_USER_MODEL = 'accounts.CustomUser'  # new
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# email setting
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# DEFAULT_FROM_EMAIL = 'zramive@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'zramive@gmail.com'
+EMAIL_HOST_PASSWORD = 'pgnmonrgbvwkztkf'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
